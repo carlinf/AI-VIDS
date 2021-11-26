@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="morris.css">
+    <script src="https://code.jquery.com/jquery-1.9.0.min.js" integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344=" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <link rel="stylesheet" href="font-awesome-pro-master/css/all.min.css">
+    <link rel="stylesheet" href="font-awesome-pro-master/css/all.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+     <meta name="msapplication-TileColor" content="#da532c">
+     <meta name="theme-color" content="#ffffff">
+
+
+    
+    
+    
+    
+
+</head>
+<body>
+
+   
+
+    
+
+
+
+
+    <div class="container">
+        
+        <nav class="navbar">
+           <div class="nav_icon" onclick="toggleSidebar()">
+             <i class="fa fa-bars"></i>
+           </div>
+           <div class="navbar__left">
+               <a class="active_link" href="#">Services</a>
+
+
+           </div>
+           <div class="navbar__right">
+               
+               <a href="#">
+                   <img width="40" src="Images/avatar.svg" alt="">
+               </a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="main__container">
+                <div class="main__title">
+                    <img src="Images/services.png" alt="">
+                    <div class="main__greeting">
+                        <h1>Services</h1>
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+            
+                     
+        </main>    
+
+                <div id="sidebar">
+                    <div class="sidebar__title">
+                        <div class="sidebar__img">
+                            <img src="Images/Logo_Image.png" alt="">
+                            <h1>AI</h1>
+                        </div>
+                        <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+                    </div>
+
+                    <div class="sidebar__menu">
+                        
+                        <div class="sidebar__link">
+                            <i class="fas fa-home-lg"></i>
+                            <a href="index.html">HOME</a>
+                        </div>
+                        
+                        
+                        
+                    </div> 
+                </div>
+     </div>
+<div id="loader-wrapper">
+        <div id="loader"></div>
+        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        
+</div>
+    
+
+  
+    
+     
+  
+     
+     
+<script src="script.js"></script>
+
+
+
+<script>
+    $(document).ready(function() {
+ 
+ // Fakes the loading setting a timeout
+   setTimeout(function() {
+       $('body').addClass('loaded');
+   }, 3500);
+
+});
+</script>
+
+
+  
+
+
+
+
+
+     
+     
+
+     
+
+</body>
+</html>

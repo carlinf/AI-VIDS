@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0"> 
+    <link href='https://fonts.googleapis.com/css?family=Roboto:900,900italic,500,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+    <link href="LoginPageCss.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+	<style type="text/css">
+		.site-link{
+      padding: 5px 15px;
+			position: fixed;
+			z-index: 99999;
+			background: #fff;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			right: 30px;
+			bottom: 30px;
+			border-radius: 10px;
+		}
+		.site-link img{
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+   <link rel="manifest" href="favicon/site.webmanifest">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-light" style="background-color: #1a1a1a;">
+        <a class="navbar-brand" href="#">
+          <img src="Images/Logo_Image.png" width="49" height="40" alt="">
+          <h1>AI</h1>
+        </a>
+      </nav>
+
+
+      <div class="body">
+        <div class="veen">
+          <div class="login-btn splits">
+            <p>Already an user?</p>
+            <button class="active">Login</button>
+          </div>
+          <div class="rgstr-btn splits">
+            <p>Don't have an account?</p>
+            <button>Register</button>
+          </div>
+          <div class="wrapper">
+            <form id="login" tabindex="500">
+              <h3>Login</h3>
+              <div class="mail">
+                <input type="mail" name="" id="login-email">
+                <label>Username</label>
+              </div>
+              <div class="passwd">
+                <input type="password" name="" id="login-password">
+                <label>Password</label>
+              </div>
+
+            
+
+
+              <div class="submit"> 
+          
+                <button class="dark" id="myButton"><a id="login1" href="index.html">Login</a></button>
+                
+                
+              </div>
+ 
+            </form>
+            <form id="register" tabindex="502">
+              <h3>Register</h3>
+
+              <div class="username">
+                <input type="text" name="" id="">
+                <label>Username</label>
+              </div>
+              <div class="mail">
+                <input type="mail" name="" id="register-email">
+                <label>Mail</label>
+              </div>
+              <div class="company">
+                <input type="text" name="" id="company_reg">
+                <label>Company</label>
+              </div>
+              <div class="passwd">
+                <input type="password" name="" id="register-password">
+                <label>Password</label>
+              </div>
+
+              <div class="submit">
+                <button class="dark">Register</button>
+  
+              </div>
+              <p class="error pink-text center-align"></p>
+            </form>
+          </div>
+        </div>	
+      </div>
+
+
+  
+
+    
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCiu-Z_DEiZWUt-GWAi8GYzw0AM7KlK9Zw",
+    authDomain: "login-fad63.firebaseapp.com",
+    projectId: "login-fad63",
+    appId: "1:801033970276:web:7817563af73504e014f571",
+    measurementId: "G-71C1SGKXYG"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //make auth and firestore ref
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  //update firestore settings 
+  db.settings({timestampsInSnapshots: true });
+</script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="LoginPageJs.js"></script>
+<script src="auth.js"></script>
+<script>
+  
+</script>
+
+
+
+
+    
+</body>
+</html>
